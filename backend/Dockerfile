@@ -3,8 +3,8 @@ WORKDIR /app
 COPY . .
 RUN go build -o todo-api
 
-FROM alpine:3.7
-WORKDIR /app
-COPY --from=build /app/todo-api /app/
+#FROM alpine:3.7
+#WORKDIR /app
+#COPY --from=build /app/todo-api /app/
 EXPOSE 8080
 CMD ./todo-api
